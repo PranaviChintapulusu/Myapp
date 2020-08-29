@@ -1,0 +1,35 @@
+.nav-item{
+    list-style-type: none;
+}
+.navbar-nav>li>a {
+    padding-left: 20px;
+}
+.buttons{
+    float: right;
+}
+.search-field{
+    border: unset;
+    border-bottom: 1px solid orange;
+    padding: 7px;
+}
+input:focus{
+    outline: none;
+}
+.fa-search:before {
+    content: "\f002";
+    padding: 10px;
+    font-size: 20px;
+}
+.dropdown{
+    border: unset;
+    border-bottom: 1px solid black;
+}
+.dropdown-toggle{
+    background-color: white;
+    border: unset;
+    border-bottom: gray;
+}
+.Item{
+    padding-left: 20px;
+    padding-right: 20px;
+}
