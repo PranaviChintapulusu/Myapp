@@ -7,27 +7,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="index.css">
-        <script src="test.js">
-          
-        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="test.js"> </script>
     </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span><img class="collapse-button" src="./images/leftbar.PNG"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse flex-row" id="navbarNav">
+          <ul class="navbar-nav flex-row">
             <li class="nav-item ">
                 <li class="nav-item px-2">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link item" href="#">HOME </a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link item" href="#">SHOP</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="#">Magazine</a>
+              <a class="nav-link item" href="#">MAGAZINE</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto buttons">
@@ -38,92 +40,70 @@
                 <input class="search-field" type="text">
             </li>
             <li class="nav-item">
-                <img src="images/bag.PNG">
+                <img class="bag-icon" src="images/bag.PNG">
             </li>
             <li class="nav-item">
-                Login
+                <span class="login-text">LOGIN</span>
             </li>
           </ul>
         </div>
       </nav>
      
-      <div class="container">
+      <div id="content" class="container">
           <div class="row">
-              <div>FIlter By</div>
-            <div class="col-2 col-sm-2 col-md-2">
+              
+            <div class="col-sm-2 col-md-2 col-lg-2">
+              <div class="filter_text">FIlter By</div>
                 <div class="dropdown">
-                    <button class="dropdown-toggle" type="button" data-toggle="dropdown">Collection
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">HTML</a></li>
-                      <li><a href="#">CSS</a></li>
-                      <li><a href="#">JavaScript</a></li>
-                    </ul>
+                  <select id="collections">
+                    <option value="">Collection</option>
+                    <option value="Men">Men</option>
+                    <option value="Women" >Women</option>
+                    <option value="Kids">Kids</option>
+                  </select>
                   </div> 
                <div class="dropdown">
-                <button class="dropdown-toggle" type="button" data-toggle="dropdown">Color
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                </ul>
+                <select id="colors">
+                  <option value="">Color</option>
+                  <option value="1">Red</option>
+                  <option value="2">Blue</option>
+                  <option value="3" >Green</option>
+                  <option value="4">Yellow</option>
+                  <option value="5">Orange</option>
+                  <option value="6">White</option>
+                </select>
               </div> 
               
               <div class="dropdown">
-                <button class="dropdown-toggle" type="button" data-toggle="dropdown">Category
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                </ul>
+                <select id="Category">
+                  <option value="">Category</option>
+                  <option value="1">Shirts</option>
+                  <option value="2">Jeans</option>
+                </select>
               </div> 
-              <div class="Pricebar">
-                  <div>Price Range</div>
-                <form class="range-field my-4 w-25">
-                    <input type="range" min="0" max="100" />
+              <div class="price-label">Price Range</div>
+              <div id="slider-range"></div>
+              <div class="row slider-labels">
+                <div class="col-xs-6 caption">
+                  <strong>Min:</strong> <span id="slider-range-value1"></span>
+                </div>
+                <div class="col-xs-6 text-right caption">
+                  <strong>Max:</strong> <span id="slider-range-value2"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <form>
+                    <input type="hidden" name="min-value" value="">
+                    <input type="hidden" name="max-value" value="">
                   </form>
-                  
-              </div> 
+                </div>
+              </div>
             </div>
-            <div class="col-9 col-sm-9 col-md-9">
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item1.PNG">
-                        <div class="bottom-left">Bottom Left</div>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item2.PNG">
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/irem3.PNG">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item4.PNG">
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item5.PNG">
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item6.PNG">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item7.PNG">
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item8.PNG">
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <img class="Item" src="images/item9.PNG">
-                    </div>
-                </div>
+           
+               <div id="demo" class="col-sm-9 col-md-9 col-lg-9"></div>
                 
-            </div>
+            
             <ul class = "pagination">
                 <li><a href = "#">&laquo;</a></li>
                 <li class = "active"><a href = "#">1</a></li>
@@ -141,9 +121,8 @@
           </div>
       </div>
 
-<div class="demo">
-  <button type="button" onclick="loadDoc()">Change Content</button>
-</div>
+
+<script src="test.js"> </script>
 
 </body>
 </html>
